@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API demo</title>
+    <script src="./process.js"></script>
+    <!-- Import axios library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+</head>
+<body>
+    <div style="width: 100%;">
+        <div style="width: 50%; height: 100px; float: left; background: rgb(156, 192, 156);">
+            <section class="main-input-comment">
+                <label for="comment">Search</label>
+                <textarea
+                    name="search"
+                    id="search"
+                    placeholder="(starting letter)">
+                </textarea>
+                <button 
+                    onclick="getNames()">
+                    Get names
+                </button>
+            </section>
+            <section class="main-result">
+                <p id="main-result-block" class="main-result-block invisible">
+                    <span>Result:</span>
+                    <span id="result"></span>
+                </p>
+            </section>
+        </div>
+        <div style="margin-left: 50%; height: 100px; background: rgb(194, 194, 223);">
+            <section class="addnames">
+                <label for="comment">Add a Name</label>
+                <textarea
+                    name="names"
+                    id="names"
+                    placeholder="enter name">
+                </textarea>
+                <button 
+                    onclick="addName()">
+                    Add name
+                </button>
+            </section>
+            <section class="status">
+                <p id="status-block" class="status-block invisible">
+                    <span>Status:</span>
+                    <span id="status_result"></span>
+                </p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
