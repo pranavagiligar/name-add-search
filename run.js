@@ -14,21 +14,21 @@ const bodyParser = require('body-parser');
 // database
 var list = ["Tony","Lisa","Michael","Ginger","Food"]
 
-// express object creation
+// express object creation also know as http server object creation
 var app = express();
 
 // adding json body parser to decode json data in post request
 app.use(bodyParser.json()); 
 
 // server creation on port 3000
-app.listen(3000, serverStarted);
+app.listen(3000, serverHasStared);
 
 // server start callback. May be used for database initialization, etc..
-function serverStarted() {
+function serverHasStared() {
     console.log("Server running on port 3000");
 }
 
-// Adding this middleware is only for development purpose
+// Adding this middleware is only for development purpose: (Ignore for now)
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
@@ -63,7 +63,15 @@ function provideNames(req, res, next) {
 
 function provideFilteredNames(req, res, next) {
     let char = req.query.initial
-    res.json(list.filter(name => name.startsWith(char)));
+    var resList = []
+    for (var i = 0; i < list.length; i++) {
+        if (list[i].startsWith(char)) {
+            resList.push(list[i])
+        }
+    }
+
+    res.json(resList)
+    //res.json(list.filter(name => name.startsWith(char)));
 }
 
 function saveNames(req, res) {
