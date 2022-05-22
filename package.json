@@ -1,0 +1,23 @@
+{
+  "name": "name-add-search",
+  "version": "1.0.0",
+  "description": "Nodejs server to add and search names stored in in memory array. Interface with HTML and axios.",
+  "main": "run.js",
+  "scripts": {
+    "server": "node run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pranavagiligar/name-add-search.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pranavagiligar/name-add-search/issues"
+  },
+  "homepage": "https://github.com/pranavagiligar/name-add-search#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1"
+  }
+}

@@ -7,10 +7,9 @@ Nodejs server to add and search names stored in in memory array. Interface with 
 4. run below commands
 
 ```
-   npm install express
-   npm install body-parser
-   node run.js
-   ```
+   npm install
+   npm run server
+```
    
 5. open ```index.html``` in your browser (by double click on ```index.html```)
 6. Interact with the features!!
